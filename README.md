@@ -1,10 +1,21 @@
-This repository contains the code and models for our paper:
+This repository contains the code for our project based on:
 
 **What Can Transformers Learn In-Context? A Case Study of Simple Function Classes** <br>
 *Shivam Garg\*, Dimitris Tsipras\*, Percy Liang, Gregory Valiant* <br>
 Paper: http://arxiv.org/abs/2208.01066 <br><br>
 
 ![](setting.jpg)
+
+
+## Getting started
+You can start by checking out our notebooks:
+- The `original.ipynb` notebook contains code from the original paper to trian models, plot the pre-computed metrics, and evaluate them on new data.
+- The `single-degree-polynomial-regression.ipynb` notebook tests the ability of a transformer to learn single-degree polynomial regression
+- The `polynomial-regression.ipynb` notebook tests the ability of a transformer to learn general polynomial regression.
+- The `knn-classification.ipynb` notebook tests the ability of a transformer to learn knn-based classification.
+
+To recompute our plots:
+- The `review.ipynb` notebook contains code to plot the pre-computed metrics and evaluate them on new data.
 
 ```bibtex
     @InProceedings{garg2022what,
@@ -14,31 +25,3 @@ Paper: http://arxiv.org/abs/2208.01066 <br><br>
         booktitle={arXiv preprint}
     }
 ```
-
-## Getting started
-You can start by cloning our repository and following the steps below.
-
-1. Install the dependencies for our code using Conda. You may need to adjust the environment YAML file depending on your setup.
-
-    ```
-    conda env create -f environment.yml
-    conda activate in-context-learning
-    ```
-
-2. Download [model checkpoints](https://github.com/dtsip/in-context-learning/releases/download/initial/models.zip) and extract them in the current directory.
-
-    ```
-    wget https://github.com/dtsip/in-context-learning/releases/download/initial/models.zip
-    unzip models.zip
-    ```
-
-3. [Optional] If you plan to train, populate `conf/wandb.yaml` with you wandb info.
-
-That's it! You can now explore our pre-trained models or train your own. The key entry points
-are as follows (starting from `src`):
-- The `eval.ipynb` notebook contains code to load our own pre-trained models, plot the pre-computed metrics, and evaluate them on new data.
-- `train.py` takes as argument a configuration yaml from `conf` and trains the corresponding model. You can try `python train.py --config conf/toy.yaml` for a quick training run.
-
-# Maintainers
-* [Shivam Garg](https://cs.stanford.edu/~shivamg/)
-* [Dimitris Tsipras](https://dtsipras.com/)
