@@ -15,7 +15,7 @@ You can start by checking out our notebooks:
 - The `knn-classification.ipynb` notebook tests the ability of a transformer to learn knn-based classification.
 
 To recompute our plots:
-- The `review.ipynb` notebook contains code to plot the pre-computed metrics and evaluate them on new data.
+- The `review.ipynb` notebook contains code to test a toy model and to plot the metrics of our pre-trained models and evaluate them on new data.
 
 ```bibtex
     @InProceedings{garg2022what,
