@@ -14,7 +14,7 @@ You can start by checking out our notebooks:
 - The `polynomial-regression.ipynb` notebook tests the ability of a transformer to learn general polynomial regression.
 - The `knn-classification.ipynb` notebook tests the ability of a transformer to learn knn-based classification.
 
-- To recreate our models, run the `single-degree-polynomial-regression.ipynb` notebook.
+- To recreate our models, run the `single-degree-polynomial-regression.ipynb` notebook. You can vary the args.training.task_kwargs["degree"] parameter to change the degree of the polynomial.
 
 To recompute our plots:
 - The `review.ipynb` notebook contains code to test a toy model and to plot the metrics of our pre-trained models and evaluate them on new data.
