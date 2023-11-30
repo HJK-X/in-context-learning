@@ -1,0 +1,10 @@
+Test log:
+
+Single Degree Polynomial Regression:
+1. extremely simple case
+dims = 1
+degree = 1
+steps = 10001
+
+result: performed the same as guessing zero
+
