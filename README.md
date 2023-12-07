@@ -10,14 +10,14 @@ Paper: http://arxiv.org/abs/2208.01066 <br><br>
 ## Getting started
 You can start by checking out our notebooks:
 - The `original.ipynb` notebook contains code from the original paper to trian models, plot the pre-computed metrics, and evaluate them on new data.
-- The `single-degree-polynomial-regression.ipynb` notebook tests the ability of a transformer to learn single-degree polynomial regression
-- The `polynomial-regression.ipynb` notebook tests the ability of a transformer to learn general polynomial regression.
-- The `knn-classification.ipynb` notebook tests the ability of a transformer to learn knn-based classification.
+- The `polynomial-regression.ipynb` notebook tests the ability of a transformer to learn fixed degree or descending degree polynomial regression.
+- The `knn-classification.ipynb` notebook tests the ability of a transformer to learn knn-based classification. This is very slow due to clustering and k-nearest neighbor operations.
 
-- To recreate our models, run the `single-degree-polynomial-regression.ipynb` notebook. You can vary the args.training.task_kwargs["degree"] parameter to change the degree of the polynomial.
+- To recreate our models, run the `polynomial-regression.ipynb` notebook. This will create the full model from scratch, which will take around two hours. You can vary the args.training.task_kwargs["degree"] parameter to change the degree of the polynomial or the args.training.task parameter to change the learned task.
+- To create smaller models, run the `polynomial-regression.ipynb` notebook and vary the args.training.train_steps parameter to decrease the number of iteration steps.
 
 To recompute our plots:
-- The `review.ipynb` notebook contains code to test a toy model and to plot the metrics of our pre-trained models and evaluate them on new data.
+- The `review.ipynb` notebook contains code to plot the metrics of our pre-trained models and evaluate them on new data.
 
 ```bibtex
     @InProceedings{garg2022what,
